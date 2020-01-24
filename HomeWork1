@@ -1,0 +1,80 @@
+# Задание 1
+m=5
+s="Hello World"
+print(s,m)
+s=input("Введите значение:")
+if s.isdigit():
+    print("Введено число")
+else:
+    print("Введена строка")
+# Задание 2
+s=input("Введите время в секундах:")
+if s.isdigit():
+    hh=int(s)//3600
+    mm=(int(s)-hh*3600)//60
+    ss= int(s)-hh*3600- mm*60
+    print("Время {}:{}:{}".format(hh,mm,ss))
+
+else:
+    print("Введено не число")
+# Задание 3
+s=input("Введите число:")
+if s.isdigit():
+    m=int(s)+int(s+s)+int(s+s+s)
+    print("Результат: ", m)
+else:
+    print("Введено не число")
+# Задание 4
+s=input("Введите число:")
+if s.isdigit() and int(s)>=0:
+    max_val = int(s[0])
+    max_val1 = int(s[0])
+    for i in range(len(s)):
+        if int(s[i])> max_val:
+            max_val=int(s[i])
+    i=0
+    while i != (len(s)):
+        if int(s[i])> max_val1:
+            max_val1=int(s[i])
+        i+=1
+    print("Мксимальное число: ", max_val1, max_val)
+else:
+    print("Введено не число или оно отрицательно")
+# Задание 5
+s = input("Введите значение выручки:")
+t = input("Введите значение издержек:")
+if not(s.isdigit()) or not(t.isdigit()) :
+    print("Введено не число :(")
+else:
+    virucka = float(s)
+    izderjki = float(t)
+    if virucka < 0 or izderjki < 0:
+        print("Выручка или издержки не могут быть отрицательными")
+    elif izderjki > virucka:
+        print("Фирма работает в убыток :(")
+    else:
+        print("Ваша фирма прибыльна")
+        s = input("Введите количество сотрудников:")
+        if s.isdigit():
+           print("Прибыль на одного сотрудник:",(virucka-izderjki)/int(s))
+        else:
+            print("Введено не число")
+# Задание 6
+
+s = input("Введите результат первого дня: ")
+t = input("Введите результат, который требуется достичь: ")
+if not(s.isdigit()) or not(t.isdigit()) :
+    print("Введено не число :(")
+else:
+    a = float(s)
+    b = float(t)
+    if a > b:
+        print("Результат первого дня больше, чем тот, которого требуется достичь")
+    elif a == b:
+        print("Вы уже достигли результата")
+    else:
+        i=0
+        while a < b :
+            i += 1
+            a = a*1.1
+        print("Вы достигните резульната на", i, "день")
