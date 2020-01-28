@@ -1,4 +1,5 @@
 # Задание 1
+
 mylist= [15,"story", 27.7,[1,2,4]]
 for i in mylist:
     print(type(i))
